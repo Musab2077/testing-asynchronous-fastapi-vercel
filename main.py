@@ -8,6 +8,7 @@ async def load_model():
     global embeddings
     embedding_model_name = 'sentence-transformers/all-MiniLM-L6-v2'
     embeddings=HuggingFaceEmbeddings(model_name= embedding_model_name)
+    return "embeddings loaded"
 
 @app.get('/testing')
 async def testing():
