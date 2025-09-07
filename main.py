@@ -5,6 +5,9 @@ app = FastAPI()
 
 @app.get('/')
 async def testing():
-    embedding_model_name = 'sentence-transformers/all-MiniLM-L6-v2'
-    embeddings=HuggingFaceEmbeddings(model_name= embedding_model_name)
-    return "hello"
+    try:
+        embedding_model_name = 'sentence-transformers/all-MiniLM-L6-v2'
+        embeddings=HuggingFaceEmbeddings(model_name= embedding_model_name)
+        return "hello"
+    except Exception as e:
+        return e
