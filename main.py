@@ -1,9 +1,10 @@
 from fastapi import FastAPI
-import asyncio
+from langchain_community.embeddings import HuggingFaceEmbeddings
 
 app = FastAPI()
 
 @app.get('/')
 async def testing():
-    await asyncio.sleep(1)
+    embedding_model_name = 'sentence-transformers/all-MiniLM-L6-v2'
+    embeddings=HuggingFaceEmbeddings(model_name= embedding_model_name)
     return "hello"
