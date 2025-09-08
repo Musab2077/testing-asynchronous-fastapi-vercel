@@ -14,7 +14,7 @@ load_dotenv()
 
 app = FastAPI(title="Hugging Face Embeddings API")
 
-embeddings=HuggingFaceEmbeddings(model_name= "sentence-transformers/paraphrase-MiniLM-L3-v2")
+embeddings=HuggingFaceEmbeddings(model_name= "thenlper/gte-tiny")
 # embeddings = HuggingFaceInferenceAPIEmbed 
 
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
