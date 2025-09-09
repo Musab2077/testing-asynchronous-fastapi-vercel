@@ -16,7 +16,7 @@ load_dotenv()
 
 app = FastAPI(title="Hugging Face Embeddings API")
 
-embeddings = FlagEmbedding(model_name="BAAI/bge-small-en-v1.5")
+# embeddings = FlagEmbedding(model_name="BAAI/bge-small-en-v1.5")
 # embeddings=HuggingFaceEmbeddings(model_name= "sentence-transformers/all-MiniLM-L6-v2")
 # # embeddings = HuggingFaceInferenceAPIEmbed 
 

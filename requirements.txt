@@ -1,5 +1,6 @@
 fastapi
 uvicorn
-sentence-transformers==5.0.0
 langchain-community
+langchain-core
+langchain-groq
 fastembed
